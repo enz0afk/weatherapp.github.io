@@ -1,0 +1,85 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+body{
+  background-color:#F5D0C5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+
+  border-radius: 10px;
+  background-color: #FCFAF9;
+  padding: 20px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#container > .block{
+  padding: 20px;
+}
+#information-container{
+  display: flex;
+  margin-bottom: 1px;
+}
+.info{
+  margin-left: 5px;
+}
+
+#location{
+  margin-top: 2px;
+  font-weight: bold;
+  font-size: large;
+}
+#date{
+  font-size: small;
+  color: gray;
+  margin-bottom: 2px;
+}
+
+#temperature{
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  animation: pulse 1s linear infinite;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+  0% { transform: translate(-50%, -50%) scale(0) }
+  60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+}
+@keyframes pulse {
+  0% , 60% , 100%{ transform:  scale(1) }
+  80% { transform:  scale(1.2)}
+}
